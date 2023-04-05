@@ -40,5 +40,6 @@ ingrese una edad válida.
 anteriormente. El proyecto se evaluará en función de la calidad del código, la implementación de los conceptos de
 programación orientada a objetos, la funcionalidad del programa y la documentación.**
 
-![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png){width='100px'}
-![Diagrama de clases](C:\Users\annek\OneDrive\Imágenes\Diagrama de estado.drawio (1).png){width='100px'}
+1
+<image src="\Imágenes\Diagrama de estado.drawio (1).png" alt="diagrama de clases">
+
