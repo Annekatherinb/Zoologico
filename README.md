@@ -40,5 +40,5 @@ ingrese una edad válida.
 anteriormente. El proyecto se evaluará en función de la calidad del código, la implementación de los conceptos de
 programación orientada a objetos, la funcionalidad del programa y la documentación.**
 
-<p style = 'text-align:center;'>
+
 ![Diagrama de clases](C:\Users\annek\OneDrive\Imágenes\Diagrama de estado.drawio (1).png){width='100px'}
