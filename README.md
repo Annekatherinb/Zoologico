@@ -1,6 +1,6 @@
 # Zoologico
 Hecho por: Steban Rivera - Anne Rincon
-### Primer proyecto  
+### *_PRIMER PROYECTO_*
 
 #### Enunciado  
 
@@ -39,3 +39,6 @@ ingrese una edad válida.
 **Los estudiantes deben entregar un código C++ completo que implemente todas las funcionalidades especificadas
 anteriormente. El proyecto se evaluará en función de la calidad del código, la implementación de los conceptos de
 programación orientada a objetos, la funcionalidad del programa y la documentación.**
+
+<p style = 'text-align:center;'>
+![Diagrama de clases](C:\Users\annek\OneDrive\Imágenes\Diagrama de estado.drawio (1).png){width='100px'}
