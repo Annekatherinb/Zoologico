@@ -41,5 +41,5 @@ anteriormente. El proyecto se evaluará en función de la calidad del código, l
 programación orientada a objetos, la funcionalidad del programa y la documentación.**
 
 1
-<image src="\Imágenes\Diagrama de estado.drawio (1).png" alt="diagrama de clases">
+<image src="\Imágenes\Diagrama de estado.drawio (1).png" alt="diagrama de clases"> 
 
