@@ -38,7 +38,10 @@ ingrese una edad válida.
 
 **Los estudiantes deben entregar un código C++ completo que implemente todas las funcionalidades especificadas
 anteriormente. El proyecto se evaluará en función de la calidad del código, la implementación de los conceptos de
-programación orientada a objetos, la funcionalidad del programa y la documentación.**
+programación orientada a objetos, la funcionalidad del programa y la documentación.**  
 
 
-
+![Diagrama de clases](https://github.com/Annekatherinb/Zoologico/blob/6c2d8ed3c9d78f8c86aa425f668e5e687c51b92b/Diagrama%20de%20estado.drawio%20(1).png)  
+  
+    
+ 1. ### Funcionalidad del Programa
