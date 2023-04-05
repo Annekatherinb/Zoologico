@@ -1,8 +1,8 @@
 # Zoologico
 Hecho por: Steban Rivera - Anne Rincon
-# # # Primer proyecto  
+### Primer proyecto  
 
-# # # # # Enunciado  
+##### Enunciado  
 
 En este proyecto, se espera que los estudiantes implementen un programa en C++ que simule el funcionamiento de
 un zoológico. El programa debe hacer uso de los conceptos de programación orientada a objetos, incluyendo la
