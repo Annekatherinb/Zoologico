@@ -49,18 +49,6 @@ cmake_ninja_workdir = A$:/Proyecto/Zoologico/cmake-build-debug/
 
 build cmake_object_order_depends_target_Zoologico: phony || CMakeFiles/Zoologico.dir
 
-build CMakeFiles/Zoologico.dir/main.cpp.obj: CXX_COMPILER__Zoologico_Debug A$:/Proyecto/Zoologico/main.cpp || cmake_object_order_depends_target_Zoologico
-  DEP_FILE = CMakeFiles\Zoologico.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Zoologico.dir
-  OBJECT_FILE_DIR = CMakeFiles\Zoologico.dir
-
-build CMakeFiles/Zoologico.dir/src/Main.cpp.obj: CXX_COMPILER__Zoologico_Debug A$:/Proyecto/Zoologico/src/Main.cpp || cmake_object_order_depends_target_Zoologico
-  DEP_FILE = CMakeFiles\Zoologico.dir\src\Main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Zoologico.dir
-  OBJECT_FILE_DIR = CMakeFiles\Zoologico.dir\src
-
 build CMakeFiles/Zoologico.dir/src/Animales.cpp.obj: CXX_COMPILER__Zoologico_Debug A$:/Proyecto/Zoologico/src/Animales.cpp || cmake_object_order_depends_target_Zoologico
   DEP_FILE = CMakeFiles\Zoologico.dir\src\Animales.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
@@ -85,6 +73,12 @@ build CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj: CXX_COMPILER__Zoologico_Debug A$
   OBJECT_DIR = CMakeFiles\Zoologico.dir
   OBJECT_FILE_DIR = CMakeFiles\Zoologico.dir\src
 
+build CMakeFiles/Zoologico.dir/main.cpp.obj: CXX_COMPILER__Zoologico_Debug A$:/Proyecto/Zoologico/main.cpp || cmake_object_order_depends_target_Zoologico
+  DEP_FILE = CMakeFiles\Zoologico.dir\main.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Zoologico.dir
+  OBJECT_FILE_DIR = CMakeFiles\Zoologico.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Zoologico
@@ -93,7 +87,7 @@ build CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj: CXX_COMPILER__Zoologico_Debug A$
 #############################################
 # Link the executable Zoologico.exe
 
-build Zoologico.exe: CXX_EXECUTABLE_LINKER__Zoologico_Debug CMakeFiles/Zoologico.dir/main.cpp.obj CMakeFiles/Zoologico.dir/src/Main.cpp.obj CMakeFiles/Zoologico.dir/src/Animales.cpp.obj CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj
+build Zoologico.exe: CXX_EXECUTABLE_LINKER__Zoologico_Debug CMakeFiles/Zoologico.dir/src/Animales.cpp.obj CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj CMakeFiles/Zoologico.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Zoologico.dir

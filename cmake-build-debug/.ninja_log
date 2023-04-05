@@ -1,0 +1,9 @@
+# ninja log v5
+3	545	7024352955870769	CMakeFiles/Zoologico.dir/src/Animales.cpp.obj	7644afbae95d9116
+3	472	7024354980702087	CMakeFiles/Zoologico.dir/src/Main.cpp.obj	1f74713381e7da0e
+4	472	7024362276252665	CMakeFiles/Zoologico.dir/main.cpp.obj	c0575f1cdcde1cef
+10	733	7024352957757812	CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj	db50e49c94577ac7
+24	707	7024352957480230	CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj	19b14676eea9373c
+16	707	7024352957480230	CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj	79b5613ace6ad3aa
+1	259	7024362741739995	build.ninja	364f756a78bfee42
+473	657	7024362278030268	Zoologico.exe	436fc97f00421ccf

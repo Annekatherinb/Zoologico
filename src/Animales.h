@@ -15,9 +15,6 @@ using std::getline;
 class Animales {
 private:
 
-    Animales(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad,
-             int horasSueno, int jugo);
-
     string especie;
     string habitat;
     string nombre;
@@ -25,10 +22,10 @@ private:
     string salud;
     int id;
     int edad;
-    int horasSueno;
-    int jugo;
-
 public:
+
+    Animales(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad);
+
 
 
 

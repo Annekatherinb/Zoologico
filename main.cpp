@@ -1,6 +1,12 @@
+#include <string>
 #include <iostream>
+using std::string;
+using std::cout;
+using std::endl;
+using std::getline;
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+
+
+int main(){
+    cout<<"hola";
 }

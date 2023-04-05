@@ -4,9 +4,32 @@
 
 #ifndef ZOOLOGICO_ACCIONES_H
 #define ZOOLOGICO_ACCIONES_H
+#include "Animales.h"
+#include <string>
+#include <iostream>
+#include <vector>
+#include <iterator>
+#include <unordered_map>
 
 
-class Acciones {
+using std::string;
+using std::cout;
+using std::endl;
+using std::getline;
+using std::unordered_map;
+using std::make_pair;
+using std::iterator;
+
+
+class Alimentacion {
+private:
+
+    string tipoAlimento;
+    std::vector<string> vectorAlimentos;
+    bool alimentar;
+    unordered_map<string ,Animales*> mapaAlimentos;
+
+public:
 
 };
 

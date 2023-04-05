@@ -17,5 +17,5 @@ target_link_libraries(${CMAKE_PROJECT_NAME}_lib)
 
 
 # Instrucción que define el ejecutable a partir de las fuentes definidas
-add_executable(${BINARY}_exe ${SOURCES} Main.cpp Animales.h Animales.cpp Alimentacion.cpp Alimentacion.h
+add_executable(${BINARY}_exe ${SOURCES}  Animales.h Animales.cpp Alimentacion.cpp Alimentacion.h
         Habitat.h Habitat.cpp Zoo.cpp Zoo.h)  # Las fuentes mas el archivo main
