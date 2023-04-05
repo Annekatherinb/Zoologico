@@ -14,21 +14,21 @@ diferentes acciones, como comer, dormir, jugar, etc.
 
 *_El programa debe permitir al usuario realizar las siguientes acciones:_* 
 
-- Añadir un nuevo hábitat al zoológico. Se tiene una serie definida de tipos de hábitat que se pueden crear en el
+* Añadir un nuevo hábitat al zoológico. Se tiene una serie definida de tipos de hábitat que se pueden crear en el
 zoológico (desértico, selvático, polar, etc).  
 
-- Añadir un nuevo animal a un hábitat existente, garantizando que el hábitat exista y que permita contener el tipo de
+* Añadir un nuevo animal a un hábitat existente, garantizando que el hábitat exista y que permita contener el tipo de
 animal. El animal debe permitir identificar a qué tipo de hábitat puede pertenecer.  
 
-- Listar todos los hábitat del zoológico y sus respectivos animales. Permitiendo a los usuarios ver la información de
+* Listar todos los hábitat del zoológico y sus respectivos animales. Permitiendo a los usuarios ver la información de
 los animales, como su nombre, edad, tipo de alimentación, estado de salud y cualquier otro atributo que el
 estudiante haya decidido agregar.  
 
-- Realizar una acción en particular (como comer, dormir, jugar, etc.) para un animal específico. Para esto debe
+* Realizar una acción en particular (como comer, dormir, jugar, etc.) para un animal específico. Para esto debe
 tomar como parámetros el hábitat al que pertenece el animal, un identificador del animal y el nombre de la acción
 a realizar.  
 
-- Permitir a los usuarios agregar y editar diferentes tipos de alimentos para los animales en el zoológico. Los
+* Permitir a los usuarios agregar y editar diferentes tipos de alimentos para los animales en el zoológico. Los
 animales deben tener diferentes tipos de alimentación según su dieta (por ejemplo, carnívoros, herbívoros,
 omnívoros).  
 
