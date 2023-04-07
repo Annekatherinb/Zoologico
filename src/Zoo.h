@@ -27,7 +27,7 @@ class Zoo{
 private:
     string nombre;
     unordered_map<int,Animales*>mapaAnimales;
-    unordered_map<string,Animales*>mapaHabitado;
+    unordered_map<string,vector<Animales*>>mapaHabitado;
     vector<Habitat*> vector1;
 
 
@@ -40,9 +40,8 @@ public:
     void mostrarAnimales();
     void agregarHabitad(string tipo);
     void mostrar();
-
-
     void animalHabitad(int id, string habitad);
+    void mostrarAnimalHabitat();
 };
 
 

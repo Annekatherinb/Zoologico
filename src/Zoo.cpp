@@ -36,7 +36,7 @@ void Zoo::agregarHabitad(string tipo){
 }
 
 void Zoo::mostrar(){
-    cout << "Habitad agregados:\n";
+    cout << "Habitats agregados:\n";
     std::vector<Habitat*>::iterator itVector;
     for (itVector = this->vector1.begin(); itVector != this->vector1.end(); ++itVector) {
         cout << (*itVector)->getTipo() << endl;
@@ -51,7 +51,7 @@ void Zoo::animalHabitad(int id, string habitad){
                 Animales *animal = itMap->second;
                 cout << "El animal que selecciono es un/una: " << animal->getEspecie() << "\n";
                 if (habitad == animal->getHabitat()) {
-                    this->mapaHabitado.insert(make_pair(habitad, animal));
+                    mapaHabitado[habitad].push_back(animal);
                     cout << "Se agrego correctamente a su habitat";
                 } else {
                     cout << "Ese animal no puede ser agregado a ese habitad ya que pertenece al habitad: "
@@ -64,4 +64,20 @@ void Zoo::animalHabitad(int id, string habitad){
         cout<<"Ese animal no se encuentra en el zoologico\n";
     }
 
+}
+void Zoo::mostrarAnimalHabitat() {
+    unordered_map<string , Animales*>::iterator it;
+    for (const auto& it : mapaHabitado) {
+        // Acceder a la clave
+        string clave = it.first;
+        cout<< "Habitad: "<<clave<<"\n";
+        // Acceder al vector asociado a la clave
+        std::vector<Animales*> vectorDeAnimales = it.second;
+        cout<<"\n";
+        // Recorrer el vector de animales y acceder a los objetos
+        for (const auto& animal : vectorDeAnimales) {
+           cout<< "su nombre es: "<<animal->getNombre()<<" es un/una: "<<animal->getEspecie()<<" tiene: "<<animal->getEdad()<<" anios"
+           <<" es: "<< animal->getAlimentacion()<< " y esta: "<< animal->getSalud()<<"\n";// Ejemplo de acceso a un método del objeto
+        }
+    }
 }

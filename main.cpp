@@ -97,7 +97,7 @@ void agregarAnimales(Zoo*Zoo){
 
 void agregarHabitad(Zoo* Habitad){
     string tipoTemp;
-    cout<< "Ingrese un Habitad: \n";
+    cout<< "Ingrese todos los habitats: \n";
     int cont = 0;
     while(cont < 4) {
         cin >> tipoTemp;
@@ -128,8 +128,9 @@ void Menu(Zoo* zoo){
         cout<<"\n**** Bienvenidos al Zoologico "<< zoo->getNombre()<<"****\n";
         cout << "1. Ingrese un animal\n";
         cout << "2. Mostrar todos los animales\n";
-        cout<<"3. Digite los habitad de los Animales\n";
-        cout<<"4. Asignar habitad a un Animal\n";
+        cout<<"3. Digite los habitat de los Animales\n";
+        cout<<"4. Asignar habitat a un Animal\n";
+        cout<<"5. Mostrar los habitats con los animales\n";
         cout<< "0. Para salir del sistema\n\n"<< endl;
 
         cin>> op;
@@ -152,9 +153,9 @@ void Menu(Zoo* zoo){
             case 4:
                 animalHabitad(zoo);
                 break;
-
-
-
+            case 5:
+                zoo->mostrarAnimalHabitat();
+                break;
             default:
                 break;
         }
