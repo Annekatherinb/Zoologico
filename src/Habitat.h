@@ -20,13 +20,17 @@ using std::unordered_map;
 using std::make_pair;
 using std::iterator;
 
-class Habitat {
+class Habitat{
 private:
     string tipo;
-    std::vector<string> vectorHabitad;
-    unordered_map<string ,Animales* > mapaHabitad;
+
 
 public:
+
+    Habitat(string tipo);
+    string getTipo();
+    string setTipo(string tipo);
+
 };
 
 
