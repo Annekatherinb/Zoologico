@@ -1,10 +1,7 @@
 #include <string>
 #include <iostream>
 #include "src/Animales.h"
-#include "src/Alimentacion.h"
 #include "src/Zoo.h"
-#include "src/Habitat.h"
-#include <stdlib.h>
 
 using std::string;
 using std::cout;
@@ -133,7 +130,7 @@ void accion(Zoo* accion){
 
 void Menu(Zoo* zoo){
     int op = 0;
-    Animales* pTemp;
+
 
     do{
         cout<<"\n**** Bienvenidos al Zoologico "<< zoo->getNombre()<<"****\n";
@@ -162,7 +159,6 @@ void Menu(Zoo* zoo){
                 agregarHabitad(zoo);
                 zoo->mostrar();
                 break;
-
             case 4:
                 animalHabitad(zoo);
                 break;
@@ -186,8 +182,6 @@ void Menu(Zoo* zoo){
 int main(){
     Zoo* pZoo = new Zoo("South Hills");
     Menu(pZoo);
-
-
     delete pZoo;
     return 0;
 

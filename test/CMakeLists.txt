@@ -1,6 +1,6 @@
 # Definicion variable del nombre del proyecto
 #cmake_minimum_required(VERSION 3.19)
-#project(casino_sources)
+#project(Zoologico)
 
 set(BINARY ${CMAKE_PROJECT_NAME}_test)  # El nombre va a a estar en el CMake principal
 

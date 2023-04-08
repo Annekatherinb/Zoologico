@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Zoologico.dir/main.cpp.obj"
   "CMakeFiles/Zoologico.dir/main.cpp.obj.d"
-  "CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj"
-  "CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj.d"
   "CMakeFiles/Zoologico.dir/src/Animales.cpp.obj"
   "CMakeFiles/Zoologico.dir/src/Animales.cpp.obj.d"
   "CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj"

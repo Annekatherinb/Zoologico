@@ -152,30 +152,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/Alimentacion.obj: src/Alimentacion.cpp.obj
-.PHONY : src/Alimentacion.obj
-
-# target to build an object file
-src/Alimentacion.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj
-.PHONY : src/Alimentacion.cpp.obj
-
-src/Alimentacion.i: src/Alimentacion.cpp.i
-.PHONY : src/Alimentacion.i
-
-# target to preprocess a source file
-src/Alimentacion.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.i
-.PHONY : src/Alimentacion.cpp.i
-
-src/Alimentacion.s: src/Alimentacion.cpp.s
-.PHONY : src/Alimentacion.s
-
-# target to generate assembly for a file
-src/Alimentacion.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.s
-.PHONY : src/Alimentacion.cpp.s
-
 src/Animales.obj: src/Animales.cpp.obj
 .PHONY : src/Animales.obj
 
@@ -260,9 +236,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... src/Alimentacion.obj
-	@echo ... src/Alimentacion.i
-	@echo ... src/Alimentacion.s
 	@echo ... src/Animales.obj
 	@echo ... src/Animales.i
 	@echo ... src/Animales.s

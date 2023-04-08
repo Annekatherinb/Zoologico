@@ -85,12 +85,6 @@
 		<Unit filename="A:/Git/Zoologico/main.cpp">
 			<Option target="Zoologico"/>
 		</Unit>
-		<Unit filename="A:/Git/Zoologico/src/Alimentacion.cpp">
-			<Option target="Zoologico"/>
-		</Unit>
-		<Unit filename="A:/Git/Zoologico/src/Alimentacion.h">
-			<Option target="Zoologico"/>
-		</Unit>
 		<Unit filename="A:/Git/Zoologico/src/Animales.cpp">
 			<Option target="Zoologico"/>
 		</Unit>

@@ -3,5 +3,5 @@ project(Zoologico)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Zoologico  src/Animales.cpp src/Habitat.h src/Alimentacion.cpp src/Habitat.cpp src/Zoo.h src/Zoo.cpp src/Animales.h
-        src/Alimentacion.h main.cpp)
+add_executable(Zoologico  src/Animales.cpp src/Habitat.h src/Habitat.cpp src/Zoo.h src/Zoo.cpp src/Animales.h
+        main.cpp )

@@ -44,30 +44,31 @@ void Zoo::mostrar(){
 }
 
 void Zoo::animalHabitad(int id, string habitad){
+
     unordered_map<int, Animales*>::iterator itMap;
-    if(mapaAnimales.count(id)>0) {
-        for (itMap = this->mapaAnimales.begin(); itMap != this->mapaAnimales.end(); ++itMap) {
-            if (id == itMap->first) {
-                Animales *animal = itMap->second;
-                cout << "El animal que selecciono es un/una: " << animal->getEspecie() << "\n";
-                if (habitad == animal->getHabitat()) {
-                    mapaHabitado[habitad].push_back(animal);
-                    cout << "Se agrego correctamente a su habitat";
-                } else {
-                    cout << "Ese animal no puede ser agregado a ese habitad ya que pertenece al habitad: "
-                         << animal->getHabitat();
-                    if(habitad != "polar" || habitad != "desertico" || habitad != "acuatico" ||habitad != "selvatico"){
-                        cout<<" ademas ese habitad no existe\n";
+    if(habitad == "polar" || habitad == "desertico" || habitad == "acuatico" || habitad == "selvatico") {
+        if (mapaAnimales.count(id) > 0) {
+            for (itMap = this->mapaAnimales.begin(); itMap != this->mapaAnimales.end(); ++itMap) {
+                if (id == itMap->first) {
+                    Animales *animal = itMap->second;
+                    cout << "El animal que selecciono es un/una: " << animal->getEspecie() << "\n";
+                    if (habitad == animal->getHabitat()) {
+                        mapaHabitado[habitad].push_back(animal);
+                        cout << "Se agrego correctamente a su habitat";
+                    } else {
+                        cout << "Ese animal no puede ser agregado a ese habitad ya que pertenece al habitad: "
+                             << animal->getHabitat();
                     }
                 }
             }
-
+        }else {
+            cout << "Ese animal no se encuentra en el zoologico\n";
         }
     }else{
-        cout<<"Ese animal no se encuentra en el zoologico\n";
+        cout<<"ese habitad no existe\n";
     }
-
 }
+
 void Zoo::mostrarAnimalHabitat() {
     unordered_map<string , Animales*>::iterator it;
     for (const auto& it : mapaHabitado) {

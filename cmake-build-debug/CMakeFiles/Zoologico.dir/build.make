@@ -82,24 +82,10 @@ CMakeFiles/Zoologico.dir/src/Animales.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Zoologico.dir/src/Animales.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S A:\Git\Zoologico\src\Animales.cpp -o CMakeFiles\Zoologico.dir\src\Animales.cpp.s
 
-CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj: CMakeFiles/Zoologico.dir/flags.make
-CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj: A:/Git/Zoologico/src/Alimentacion.cpp
-CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj: CMakeFiles/Zoologico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=A:\Git\Zoologico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj -MF CMakeFiles\Zoologico.dir\src\Alimentacion.cpp.obj.d -o CMakeFiles\Zoologico.dir\src\Alimentacion.cpp.obj -c A:\Git\Zoologico\src\Alimentacion.cpp
-
-CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E A:\Git\Zoologico\src\Alimentacion.cpp > CMakeFiles\Zoologico.dir\src\Alimentacion.cpp.i
-
-CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S A:\Git\Zoologico\src\Alimentacion.cpp -o CMakeFiles\Zoologico.dir\src\Alimentacion.cpp.s
-
 CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj: CMakeFiles/Zoologico.dir/flags.make
 CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj: A:/Git/Zoologico/src/Habitat.cpp
 CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj: CMakeFiles/Zoologico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=A:\Git\Zoologico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=A:\Git\Zoologico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj -MF CMakeFiles\Zoologico.dir\src\Habitat.cpp.obj.d -o CMakeFiles\Zoologico.dir\src\Habitat.cpp.obj -c A:\Git\Zoologico\src\Habitat.cpp
 
 CMakeFiles/Zoologico.dir/src/Habitat.cpp.i: cmake_force
@@ -113,7 +99,7 @@ CMakeFiles/Zoologico.dir/src/Habitat.cpp.s: cmake_force
 CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj: CMakeFiles/Zoologico.dir/flags.make
 CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj: A:/Git/Zoologico/src/Zoo.cpp
 CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj: CMakeFiles/Zoologico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=A:\Git\Zoologico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=A:\Git\Zoologico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj -MF CMakeFiles\Zoologico.dir\src\Zoo.cpp.obj.d -o CMakeFiles\Zoologico.dir\src\Zoo.cpp.obj -c A:\Git\Zoologico\src\Zoo.cpp
 
 CMakeFiles/Zoologico.dir/src/Zoo.cpp.i: cmake_force
@@ -127,7 +113,7 @@ CMakeFiles/Zoologico.dir/src/Zoo.cpp.s: cmake_force
 CMakeFiles/Zoologico.dir/main.cpp.obj: CMakeFiles/Zoologico.dir/flags.make
 CMakeFiles/Zoologico.dir/main.cpp.obj: A:/Git/Zoologico/main.cpp
 CMakeFiles/Zoologico.dir/main.cpp.obj: CMakeFiles/Zoologico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=A:\Git\Zoologico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Zoologico.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=A:\Git\Zoologico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Zoologico.dir/main.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Zoologico.dir/main.cpp.obj -MF CMakeFiles\Zoologico.dir\main.cpp.obj.d -o CMakeFiles\Zoologico.dir\main.cpp.obj -c A:\Git\Zoologico\main.cpp
 
 CMakeFiles/Zoologico.dir/main.cpp.i: cmake_force
@@ -141,7 +127,6 @@ CMakeFiles/Zoologico.dir/main.cpp.s: cmake_force
 # Object files for target Zoologico
 Zoologico_OBJECTS = \
 "CMakeFiles/Zoologico.dir/src/Animales.cpp.obj" \
-"CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj" \
 "CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj" \
 "CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj" \
 "CMakeFiles/Zoologico.dir/main.cpp.obj"
@@ -150,7 +135,6 @@ Zoologico_OBJECTS = \
 Zoologico_EXTERNAL_OBJECTS =
 
 Zoologico.exe: CMakeFiles/Zoologico.dir/src/Animales.cpp.obj
-Zoologico.exe: CMakeFiles/Zoologico.dir/src/Alimentacion.cpp.obj
 Zoologico.exe: CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj
 Zoologico.exe: CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj
 Zoologico.exe: CMakeFiles/Zoologico.dir/main.cpp.obj
@@ -158,7 +142,7 @@ Zoologico.exe: CMakeFiles/Zoologico.dir/build.make
 Zoologico.exe: CMakeFiles/Zoologico.dir/linklibs.rsp
 Zoologico.exe: CMakeFiles/Zoologico.dir/objects1.rsp
 Zoologico.exe: CMakeFiles/Zoologico.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=A:\Git\Zoologico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Zoologico.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=A:\Git\Zoologico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Zoologico.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Zoologico.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
