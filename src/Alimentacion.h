@@ -21,15 +21,13 @@ using std::make_pair;
 using std::iterator;
 
 
-class Alimentacion {
+class Alimentacion{
 private:
 
-    string tipoAlimento;
-    std::vector<string> vectorAlimentos;
-    bool alimentar;
-    unordered_map<string ,Animales*> mapaAlimentos;
 
 public:
+
+
 
 };
 

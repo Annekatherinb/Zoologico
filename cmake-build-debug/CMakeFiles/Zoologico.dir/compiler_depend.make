@@ -138,8 +138,6 @@ CMakeFiles/Zoologico.dir/main.cpp.obj: A:/Git/Zoologico/main.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
   A:/Git/Zoologico/src/Animales.h \
-  A:/Git/Zoologico/src/Alimentacion.h \
-  A:/Git/Zoologico/src/Animales.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h \
@@ -160,6 +158,8 @@ CMakeFiles/Zoologico.dir/main.cpp.obj: A:/Git/Zoologico/main.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/node_handle.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
+  A:/Git/Zoologico/src/Alimentacion.h \
+  A:/Git/Zoologico/src/Animales.h \
   A:/Git/Zoologico/src/Zoo.h \
   A:/Git/Zoologico/src/Habitat.h \
   A:/Git/Zoologico/src/Alimentacion.h \
@@ -461,8 +461,6 @@ CMakeFiles/Zoologico.dir/src/Animales.cpp.obj: A:/Git/Zoologico/src/Animales.cpp
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
-  A:/Git/Zoologico/src/Zoo.h \
-  A:/Git/Zoologico/src/Habitat.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h \
@@ -483,6 +481,8 @@ CMakeFiles/Zoologico.dir/src/Animales.cpp.obj: A:/Git/Zoologico/src/Animales.cpp
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/node_handle.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
+  A:/Git/Zoologico/src/Zoo.h \
+  A:/Git/Zoologico/src/Habitat.h \
   A:/Git/Zoologico/src/Alimentacion.h
 
 CMakeFiles/Zoologico.dir/src/Habitat.cpp.obj: A:/Git/Zoologico/src/Habitat.cpp \
@@ -782,7 +782,6 @@ CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj: A:/Git/Zoologico/src/Zoo.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
-  A:/Git/Zoologico/src/Habitat.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h \
@@ -803,6 +802,7 @@ CMakeFiles/Zoologico.dir/src/Zoo.cpp.obj: A:/Git/Zoologico/src/Zoo.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/node_handle.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
+  A:/Git/Zoologico/src/Habitat.h \
   A:/Git/Zoologico/src/Alimentacion.h
 
 
@@ -1090,8 +1090,6 @@ C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 A:/Git/Zoologico/src/Animales.h:
 
-A:/Git/Zoologico/src/Alimentacion.h:
-
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h:
@@ -1125,6 +1123,8 @@ C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h:
+
+A:/Git/Zoologico/src/Alimentacion.h:
 
 A:/Git/Zoologico/src/Zoo.h:
 

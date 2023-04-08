@@ -92,6 +92,42 @@ bool Zoo::buscar(int id){
     }else{
         return false;
     }
+}
 
+void Zoo::mapaAlimeto() {
+    mapaAlimentos={{"carnivoro", "carne"},{"herbivoro", "plantas"},{"omnivoro","carne y pplantas"}};
 
+    for (auto elemento : mapaAlimentos) {
+        cout << "Animal: " << elemento.first << ", Dieta: " << elemento.second << endl;
+    }
+
+}
+
+void Zoo::acciones(int op) {
+    unordered_map<int, Animales*>::iterator itMap;
+    Animales* pTemp;
+    int idJugar;
+    cout<<"Ingrese el id del animal que desea que realize la accion:\n";
+    std::cin>>idJugar;
+    if(mapaAnimales.count(idJugar)>0) {
+        if (op == 1) {
+            for (itMap = this->mapaAnimales.begin(); itMap != this->mapaAnimales.end(); ++itMap) {
+                if (idJugar == itMap->first) {
+                    Animales *pAnimal = itMap->second;
+                    pTemp->jugar(pAnimal);
+                }
+            }
+        } else if (op == 2) {
+            for (itMap = this->mapaAnimales.begin(); itMap != this->mapaAnimales.end(); ++itMap) {
+                if (idJugar == itMap->first) {
+                    Animales *pAnimal = itMap->second;
+                    pTemp->dormir(pAnimal);
+                }
+            }
+        } else {
+            cout << "Esa opcion no existe";
+        }
+    }else{
+        cout<<"Ese animal no se encuentra en este zoologico\n";
+    }
 }

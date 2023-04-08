@@ -7,11 +7,18 @@
 #include <string>
 #include <iostream>
 #include <stdlib.h>
+#include <vector>
+#include <iterator>
+#include <unordered_map>
 
 using std::string;
 using std::cout;
 using std::endl;
 using std::getline;
+using std::unordered_map;
+using std::make_pair;
+using std::iterator;
+
 
 class Animales {
 private:
@@ -24,6 +31,8 @@ private:
     int edad;
     int juego;
     int horasSueno;
+
+
 public:
 
     Animales(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad, int juego, int horasSueno);
@@ -45,9 +54,10 @@ public:
     int setJuego(int juego);
     int getHorasSueno();
     int setHorasSueno();
-    void jugando(int id);
+    void jugar(Animales* pAnimal);
     void comer(int id);
-    void dormir(int id);
+    void dormir(Animales* pAnimal);
+
 };
 
 

@@ -83,41 +83,30 @@ int Animales::setHorasSueno(){
     this->horasSueno = horasSueno;
 }
 
-void Animales::jugando(int id) {
-    Zoo* pTemp;
-    Animales* pAnimal;
-    bool verificador = pTemp->buscar(id);
-    if(verificador == true){
-        if(pAnimal->getJuego() == 0){
-            cout<<"El animal esta jugando\n";
-            pAnimal->setJuego(1);
-        }else{
-            cout<<"Este animal no puede jugar porque ya jugo\n";
-        }
+void Animales::jugar(Animales* pAnimal) {
+    if(pAnimal->getJuego() == 0){
+        cout<<" esta jugando\n";
+        pAnimal->setJuego(1);
     }else{
-        cout<<"Este animal no se encuentra en este zoologico\n";
+        cout<<"Este animal no puede jugar porque ya jugo\n";
     }
 
 }
 
-void Animales::dormir(int id) {
+void Animales::dormir(Animales* pAnimal) {
     Zoo* pTemp;
     int suenoIngresado,horasMax,corrector=0;
-    Animales* pAnimal;
-    bool verificador = pTemp->buscar(id);
-    if(verificador == true){
-        while(corrector==0){
-            cout<<"Digite las horas a dormir"<<endl;
-            cin>>suenoIngresado;
-            horasMax=suenoIngresado*1.5;
-            if(pAnimal->getHorasSueno()>=suenoIngresado && pAnimal->getHorasSueno()<=horasMax){
-                cout<<"El animal esta durmiendo\n";
-                corrector=1;
-            }else{
-                cout<<"Horas de sueno fuera del limite sano para el animal\n";
-            }
+    while(corrector==0){
+        cout<<"Digite las horas a dormir"<<endl;
+        cin>>suenoIngresado;
+        horasMax=suenoIngresado*1.5;
+        if(pAnimal->getHorasSueno()>=suenoIngresado && pAnimal->getHorasSueno()<=horasMax){
+            cout<<"El animal esta durmiendo\n";
+            corrector=1;
+        }else{
+            cout<<"Horas de sueno fuera del limite sano para el animal\n";
         }
-    }else{
-        cout<<"Este animal no se encuentra en este zoologico\n";
     }
+
 }
+

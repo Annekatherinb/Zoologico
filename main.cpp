@@ -53,13 +53,13 @@ void agregarAnimales(Zoo*Zoo){
         cin>>prueba;
         if(prueba==1){
             comprobador=2;
-            alimentaciontemp="Carnivoro";
+            alimentaciontemp="carnivoro";
         }else if(prueba==2){
             comprobador=2;
-            alimentaciontemp="Herviboro";
+            alimentaciontemp="herviboro";
         }else if(prueba==3){
             comprobador=2;
-            alimentaciontemp="Omnivoro";
+            alimentaciontemp="omnivoro";
         }else{
             cout<<"Opcion invalida"<<endl;
         }
@@ -124,9 +124,16 @@ void animalHabitad(Zoo* Habitad){
     Habitad->animalHabitad(idTemp, habitadTemp);
 }
 
+void accion(Zoo* accion){
+    int op;
+    cout<< "Ingresa la accion para que el animal pueda realizarla: \n";
+    cin>>op;
+    accion->acciones(op);
+}
+
 void Menu(Zoo* zoo){
     int op = 0;
-    Habitat* pHabi;
+    Animales* pTemp;
 
     do{
         cout<<"\n**** Bienvenidos al Zoologico "<< zoo->getNombre()<<"****\n";
@@ -135,6 +142,8 @@ void Menu(Zoo* zoo){
         cout<<"3. Digite los habitat de los Animales\n";
         cout<<"4. Asignar habitat a un Animal\n";
         cout<<"5. Mostrar los habitats con los animales\n";
+        cout<<"6. Dieta de los animales\n";
+        cout<<"7. Acciones:\n 1. Jugar\n 2.Dormir "<<endl;
         cout<< "0. Para salir del sistema\n\n"<< endl;
 
         cin>> op;
@@ -160,6 +169,13 @@ void Menu(Zoo* zoo){
             case 5:
                 zoo->mostrarAnimalHabitat();
                 break;
+            case 6:
+                zoo->mapaAlimeto();
+                break;
+            case 7:
+                accion(zoo);
+                break;
+
             default:
                 break;
         }
