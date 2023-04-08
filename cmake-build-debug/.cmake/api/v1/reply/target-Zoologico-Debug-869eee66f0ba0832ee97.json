@@ -56,7 +56,7 @@
 				2,
 				3,
 				5,
-				7
+				8
 			]
 		}
 	],
@@ -97,7 +97,7 @@
 				2,
 				3,
 				5,
-				7
+				8
 			]
 		},
 		{
@@ -106,7 +106,8 @@
 			[
 				1,
 				4,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -149,6 +150,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "src/Animales.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/Alimentacion.h",
 			"sourceGroupIndex" : 1
 		},
 		{

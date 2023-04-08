@@ -34,7 +34,7 @@ private:
 public:
 
     Zoo(string nombre);
-    void recibirAnimal(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad);
+    void recibirAnimal(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad, int horasSueno);
     string getNombre();
     string setNombre(string nombre);
     void mostrarAnimales();
@@ -42,6 +42,7 @@ public:
     void mostrar();
     void animalHabitad(int id, string habitad);
     void mostrarAnimalHabitat();
+    bool buscar(int id);
 };
 
 

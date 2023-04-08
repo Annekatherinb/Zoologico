@@ -4,6 +4,7 @@
 #include "src/Alimentacion.h"
 #include "src/Zoo.h"
 #include "src/Habitat.h"
+#include <stdlib.h>
 
 using std::string;
 using std::cout;
@@ -15,7 +16,7 @@ int contadorId = 0;
 
 void agregarAnimales(Zoo*Zoo){
     string nombreTemp, habitatTemp, especieTemp, alimentaciontemp, saludTemp;
-    int edadTemp, prueba, comprobador=0;
+    int edadTemp, prueba, comprobador=0, horasTemp;
 
     cout<<"Ingrese el nombre del animal"<<endl;
     cin.ignore();
@@ -90,8 +91,11 @@ void agregarAnimales(Zoo*Zoo){
             cout<<"Edad invalida"<<endl;
         }
     }
+    cout<<"Ingrese la cantidad de horas que duerme"<<endl;
+    cin>>horasTemp;
 
-    Zoo->recibirAnimal(nombreTemp,especieTemp,habitatTemp,alimentaciontemp,saludTemp,contadorId,edadTemp);
+
+    Zoo->recibirAnimal(nombreTemp,especieTemp,habitatTemp,alimentaciontemp,saludTemp,contadorId,edadTemp, horasTemp);
     contadorId++;
 }
 

@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Zoologico::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Zoologico-Debug-62a4974f0d6d39ae8d91.json",
+					"jsonFile" : "target-Zoologico-Debug-869eee66f0ba0832ee97.json",
 					"name" : "Zoologico",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "A:/Proyecto/Zoologico/cmake-build-debug",
-		"source" : "A:/Proyecto/Zoologico"
+		"build" : "A:/Git/Zoologico/cmake-build-debug",
+		"source" : "A:/Git/Zoologico"
 	},
 	"version" : 
 	{

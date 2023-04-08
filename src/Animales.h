@@ -6,6 +6,7 @@
 #define ZOOLOGICO_ANIMALES_H
 #include <string>
 #include <iostream>
+#include <stdlib.h>
 
 using std::string;
 using std::cout;
@@ -21,23 +22,32 @@ private:
     string salud;
     int id;
     int edad;
+    int juego;
+    int horasSueno;
 public:
 
-    Animales(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad);
+    Animales(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad, int juego, int horasSueno);
     string getNombre();
-    string setNombre();
+    string setNombre(string nombre);
     string getEspecie();
-    string setEspecie();
+    string setEspecie(string especie);
     string getHabitat();
-    string setHabitat();
+    string setHabitat(string habitat);
     string getAlimentacion();
-    string setAlimentacion();
+    string setAlimentacion(string alimentacion);
     string getSalud();
-    string setSalud();
+    string setSalud(string salud);
     int getId();
-    int setId();
+    int setId(int id);
     int getEdad();
-    int setEdad();
+    int setEdad(int edad);
+    int getJuego();
+    int setJuego(int juego);
+    int getHorasSueno();
+    int setHorasSueno();
+    void jugando(int id);
+    void comer(int id);
+    void dormir(int id);
 };
 
 

@@ -7,8 +7,8 @@
 
 Zoo::Zoo(string nombre): nombre(nombre){}
 
-void Zoo::recibirAnimal(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad){
-    Animales*pAnimalesTemp=new Animales(nombre,especie,habitat,alimentacion,salud,id,edad);
+void Zoo::recibirAnimal(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad, int horasSueno){
+    Animales*pAnimalesTemp=new Animales(nombre,especie,habitat,alimentacion,salud,id,edad, 0, horasSueno);
     this->mapaAnimales.insert(make_pair(id,pAnimalesTemp));
 }
 
@@ -56,6 +56,9 @@ void Zoo::animalHabitad(int id, string habitad){
                 } else {
                     cout << "Ese animal no puede ser agregado a ese habitad ya que pertenece al habitad: "
                          << animal->getHabitat();
+                    if(habitad != "polar" || habitad != "desertico" || habitad != "acuatico" ||habitad != "selvatico"){
+                        cout<<" ademas ese habitad no existe\n";
+                    }
                 }
             }
 
@@ -80,4 +83,15 @@ void Zoo::mostrarAnimalHabitat() {
            <<" es: "<< animal->getAlimentacion()<< " y esta: "<< animal->getSalud()<<"\n";// Ejemplo de acceso a un método del objeto
         }
     }
+}
+
+bool Zoo::buscar(int id){
+    unordered_map<int, Animales*>::iterator itMap;
+    if(mapaAnimales.count(id)>0) {
+        return true;
+    }else{
+        return false;
+    }
+
+
 }
