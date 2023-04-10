@@ -8,7 +8,7 @@
 Zoo::Zoo(string nombre): nombre(nombre){}
 
 void Zoo::recibirAnimal(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad, int horasSueno){
-    Animales*pAnimalesTemp=new Animales(nombre,especie,habitat,alimentacion,salud,id,edad, 0, horasSueno);
+    Animal*pAnimalesTemp=new Animal(nombre, especie, habitat, alimentacion, salud, id, edad, 0, horasSueno);
     this->mapaAnimales.insert(make_pair(id,pAnimalesTemp));
 }
 
@@ -21,10 +21,10 @@ string Zoo::setNombre(string nombre){
 }
 
 void Zoo::mostrarAnimales() {
-    unordered_map<int, Animales*>::iterator itmap;
+    unordered_map<int, Animal*>::iterator itmap;
     for(itmap = this->mapaAnimales.begin(); itmap != this->mapaAnimales.end();itmap++){
         int llave = itmap->first;
-        Animales* Animales = itmap->second;
+        Animal* Animales = itmap->second;
         cout<<"El animal con el id: "<< llave << " se llama: "<< Animales->getNombre()<<" y es un/una: "<< Animales->getEspecie()<<endl;
     }
 }
@@ -45,12 +45,12 @@ void Zoo::mostrar(){
 
 void Zoo::animalHabitad(int id, string habitad){
 
-    unordered_map<int, Animales*>::iterator itMap;
+    unordered_map<int, Animal*>::iterator itMap;
     if(habitad == "polar" || habitad == "desertico" || habitad == "acuatico" || habitad == "selvatico") {
         if (mapaAnimales.count(id) > 0) {
             for (itMap = this->mapaAnimales.begin(); itMap != this->mapaAnimales.end(); ++itMap) {
                 if (id == itMap->first) {
-                    Animales *animal = itMap->second;
+                    Animal *animal = itMap->second;
                     cout << "El animal que selecciono es un/una: " << animal->getEspecie() << "\n";
                     if (habitad == animal->getHabitat()) {
                         mapaHabitado[habitad].push_back(animal);
@@ -70,13 +70,13 @@ void Zoo::animalHabitad(int id, string habitad){
 }
 
 void Zoo::mostrarAnimalHabitat() {
-    unordered_map<string , Animales*>::iterator it;
+    unordered_map<string , Animal*>::iterator it;
     for (const auto& it : mapaHabitado) {
         // Acceder a la clave
         string clave = it.first;
         cout<< "Habitad: "<<clave<<"\n";
         // Acceder al vector asociado a la clave
-        std::vector<Animales*> vectorDeAnimales = it.second;
+        std::vector<Animal*> vectorDeAnimales = it.second;
         cout<<"\n";
         // Recorrer el vector de animales y acceder a los objetos
         for (const auto& animal : vectorDeAnimales) {
@@ -87,7 +87,7 @@ void Zoo::mostrarAnimalHabitat() {
 }
 
 bool Zoo::buscar(int id){
-    unordered_map<int, Animales*>::iterator itMap;
+    unordered_map<int, Animal*>::iterator itMap;
     if(mapaAnimales.count(id)>0) {
         return true;
     }else{
@@ -96,39 +96,49 @@ bool Zoo::buscar(int id){
 }
 
 void Zoo::mapaAlimeto() {
-    mapaAlimentos={{"carnivoro", "carne"},{"herbivoro", "plantas"},{"omnivoro","carne y pplantas"}};
-
+    mapaAlimentos={{"carnivoro", "carne"},{"herbivoro", "plantas"},{"omnivoro","cualquiera"}};
     for (auto elemento : mapaAlimentos) {
         cout << "Animal: " << elemento.first << ", Dieta: " << elemento.second << endl;
     }
 
 }
-
 void Zoo::acciones(int op) {
-    unordered_map<int, Animales*>::iterator itMap;
-    Animales* pTemp;
-    int idJugar;
+    unordered_map<int, Animal*>::iterator itMap;
+    Animal* pTemp;
+    int idAccion;
     cout<<"Ingrese el id del animal que desea que realize la accion:\n";
-    std::cin>>idJugar;
-    if(mapaAnimales.count(idJugar)>0) {
-        if (op == 1) {
-            for (itMap = this->mapaAnimales.begin(); itMap != this->mapaAnimales.end(); ++itMap) {
-                if (idJugar == itMap->first) {
-                    Animales *pAnimal = itMap->second;
-                    pTemp->jugar(pAnimal);
+    std::cin>>idAccion;
+    if(mapaAnimales.count(idAccion)>0) {
+        for (itMap = this->mapaAnimales.begin(); itMap != this->mapaAnimales.end(); ++itMap) {
+            if (idAccion == itMap->first){
+                if (op == 1) {
+                    Animal *pAnimal1 = itMap->second;
+                    pTemp->jugar(pAnimal1);
+                }
+                else if(op == 2){
+                    Animal *pAnimal2 = itMap->second;
+                    pTemp->dormir(pAnimal2);
+                }
+                else if(op == 3){
+                    Animal *pAnimal = itMap->second;
+                    string comiendo;
+                    auto it = mapaAlimentos.find(pAnimal->getAlimentacion());
+                    if(it != mapaAlimentos.end()) {
+                        cout<< "Digite el nombre de la comida que desea darle al animal:\n 1. carne\n 2.plantas\n 3.cualquiera\n";
+                        std::cin >> comiendo;
+                        if (comiendo == it->second) {
+                            pTemp->comer(pAnimal);
+                        } else {
+                            cout << "Eso no esta dentro de la dieta del animal\n";
+                        }
+                    }
+                }else{
+                    cout<<"Esa opcion no existe\n";
                 }
             }
-        } else if (op == 2) {
-            for (itMap = this->mapaAnimales.begin(); itMap != this->mapaAnimales.end(); ++itMap) {
-                if (idJugar == itMap->first) {
-                    Animales *pAnimal = itMap->second;
-                    pTemp->dormir(pAnimal);
-                }
-            }
-        } else {
-            cout << "Esa opcion no existe";
         }
-    }else{
-        cout<<"Ese animal no se encuentra en este zoologico\n";
+    }else {
+        cout << "Ese animal no esta en este zoologico\n";
     }
 }
+

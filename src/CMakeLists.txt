@@ -1,6 +1,6 @@
 #file(GLOB_RECURSE SOURCES LIST_DIRECTORIES true *.h *.cpp *.cc)
 
-file(GLOB_RECURSE SOURCES Animales.h Animales.cpp Alimentacion.cpp Alimentacion.h Habitat.h Habitat.cpp Zoo.cpp Zoo.h)  #Todas las fuentes sin el Main
+file(GLOB_RECURSE SOURCES Animal.h Animal.cpp Alimentacion.cpp Alimentacion.h Habitat.h Habitat.cpp Zoo.cpp Zoo.h)  #Todas las fuentes sin el Main
 
 
 set(BINARY ${CMAKE_PROJECT_NAME})  # El nombre va a a estar en el CMake principal
@@ -17,5 +17,5 @@ target_link_libraries(${CMAKE_PROJECT_NAME}_lib)
 
 
 # Instrucción que define el ejecutable a partir de las fuentes definidas
-add_executable(${BINARY}_exe ${SOURCES}  Animales.h Animales.cpp Alimentacion.cpp Alimentacion.h
+add_executable(${BINARY}_exe ${SOURCES} Animal.h Animal.cpp Alimentacion.cpp Alimentacion.h
         Habitat.h Habitat.cpp Zoo.cpp Zoo.h)  # Las fuentes mas el archivo main

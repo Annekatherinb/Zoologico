@@ -6,7 +6,7 @@
 #define ZOOLOGICO_ZOO_H
 
 
-#include "Animales.h"
+#include "Animal.h"
 #include "Habitat.h"
 #include <string>
 #include <iostream>
@@ -27,10 +27,10 @@ using std::vector;
 class Zoo{
 private:
     string nombre;
-    unordered_map<int,Animales*>mapaAnimales;
-    unordered_map<string,vector<Animales*>>mapaHabitado;
+    unordered_map<int,Animal*>mapaAnimales;
+    unordered_map<string,vector<Animal*>>mapaHabitado;
     vector<Habitat*> vector1;
-    unordered_map<string, string> alimentos;
+    //unordered_map<string, string> alimentos;
     unordered_map<string ,string> mapaAlimentos;
 
 

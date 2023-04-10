@@ -1,7 +1,13 @@
 #include <string>
 #include <iostream>
-#include "src/Animales.h"
+#include "src/Animal.h"
 #include "src/Zoo.h"
+#include "src/Habitat.h"
+#include "src/Polar.h"
+#include "src/Desertico.h"
+#include "src/Selvatico.h"
+#include "src/Acuatico.h"
+
 
 using std::string;
 using std::cout;
@@ -53,7 +59,7 @@ void agregarAnimales(Zoo*Zoo){
             alimentaciontemp="carnivoro";
         }else if(prueba==2){
             comprobador=2;
-            alimentaciontemp="herviboro";
+            alimentaciontemp="herbivoro";
         }else if(prueba==3){
             comprobador=2;
             alimentaciontemp="omnivoro";
@@ -98,6 +104,7 @@ void agregarAnimales(Zoo*Zoo){
 
 void agregarHabitad(Zoo* Habitad){
     string tipoTemp;
+    Habitat* pTemp;
     cout<< "Ingrese todos los habitats: \n";
     int cont = 0;
     while(cont < 4) {
@@ -140,7 +147,7 @@ void Menu(Zoo* zoo){
         cout<<"4. Asignar habitat a un Animal\n";
         cout<<"5. Mostrar los habitats con los animales\n";
         cout<<"6. Dieta de los animales\n";
-        cout<<"7. Acciones:\n 1. Jugar\n 2.Dormir "<<endl;
+        cout<<"7. Acciones:\n 1.Jugar\n 2.Dormir\n 3.Comer"<<endl;
         cout<< "0. Para salir del sistema\n\n"<< endl;
 
         cin>> op;

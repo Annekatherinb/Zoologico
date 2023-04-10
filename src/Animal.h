@@ -2,11 +2,11 @@
 // Created by annek on 4/04/2023.
 //
 
-#ifndef ZOOLOGICO_ANIMALES_H
-#define ZOOLOGICO_ANIMALES_H
+#ifndef ZOOLOGICO_ANIMAL_H
+#define ZOOLOGICO_ANIMAL_H
 #include <string>
 #include <iostream>
-#include <stdlib.h>
+
 #include <vector>
 #include <iterator>
 #include <unordered_map>
@@ -21,7 +21,7 @@ using std::make_pair;
 using std::iterator;
 
 
-class Animales {
+class Animal {
 private:
     string especie;
     string habitat;
@@ -36,7 +36,7 @@ private:
 
 public:
 
-    Animales(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad, int juego, int horasSueno);
+    Animal(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad, int juego, int horasSueno);
     string getNombre();
     string setNombre(string nombre);
     string getEspecie();
@@ -55,11 +55,11 @@ public:
     int setJuego(int juego);
     int getHorasSueno();
     int setHorasSueno();
-    void jugar(Animales* pAnimal);
-    void comer(int id);
-    void dormir(Animales* pAnimal);
+    void jugar(Animal* pAnimal);
+    void comer(Animal* animal);
+    void dormir(Animal* pAnimal);
 
 };
 
 
-#endif //ZOOLOGICO_ANIMALES_H
+#endif //ZOOLOGICO_ANIMAL_H

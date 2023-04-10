@@ -4,7 +4,7 @@
 
 #ifndef ZOOLOGICO_HABITAT_H
 #define ZOOLOGICO_HABITAT_H
-#include "Animales.h"
+#include "Animal.h"
 #include <string>
 #include <iostream>
 #include <vector>
@@ -21,15 +21,23 @@ using std::make_pair;
 using std::iterator;
 
 class Habitat{
+
 private:
     string tipo;
+protected:
+    string clima;
+    string humedad;
 
 
 public:
 
     Habitat(string tipo);
+    Habitat(string humedad, string clima);
+
     string getTipo();
     string setTipo(string tipo);
+    void caracteristicas();
+    void mostrarCaracteristicas();
 
 };
 

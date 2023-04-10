@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "a:/Git/Zoologico/cmake-build-debug"
+			"value" : "a:/Notes P.O.O/Zoologico/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -643,7 +643,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "A:/Git/Zoologico/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "A:/Notes P.O.O/Zoologico/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -715,7 +715,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "A:/Git/Zoologico"
+			"value" : "A:/Notes P.O.O/Zoologico"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1335,7 +1335,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "A:/Git/Zoologico/cmake-build-debug"
+			"value" : "A:/Notes P.O.O/Zoologico/cmake-build-debug"
 		},
 		{
 			"name" : "Zoologico_IS_TOP_LEVEL",
@@ -1359,7 +1359,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "A:/Git/Zoologico"
+			"value" : "A:/Notes P.O.O/Zoologico"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

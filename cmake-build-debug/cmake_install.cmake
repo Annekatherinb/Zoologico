@@ -1,4 +1,4 @@
-# Install script for directory: A:/Git/Zoologico
+# Install script for directory: A:/Notes P.O.O/Zoologico
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "A:/Git/Zoologico/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "A:/Notes P.O.O/Zoologico/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

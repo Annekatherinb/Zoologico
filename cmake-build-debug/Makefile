@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = A:\Git\Zoologico
+CMAKE_SOURCE_DIR = "A:\Notes P.O.O\Zoologico"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = A:\Git\Zoologico\cmake-build-debug
+CMAKE_BINARY_DIR = "A:\Notes P.O.O\Zoologico\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start A:\Git\Zoologico\cmake-build-debug\CMakeFiles A:\Git\Zoologico\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "A:\Notes P.O.O\Zoologico\cmake-build-debug\CMakeFiles" "A:\Notes P.O.O\Zoologico\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start A:\Git\Zoologico\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "A:\Notes P.O.O\Zoologico\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -152,29 +152,77 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/Animales.obj: src/Animales.cpp.obj
-.PHONY : src/Animales.obj
+src/Acuatico.obj: src/Acuatico.cpp.obj
+.PHONY : src/Acuatico.obj
 
 # target to build an object file
-src/Animales.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Animales.cpp.obj
-.PHONY : src/Animales.cpp.obj
+src/Acuatico.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Acuatico.cpp.obj
+.PHONY : src/Acuatico.cpp.obj
 
-src/Animales.i: src/Animales.cpp.i
-.PHONY : src/Animales.i
+src/Acuatico.i: src/Acuatico.cpp.i
+.PHONY : src/Acuatico.i
 
 # target to preprocess a source file
-src/Animales.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Animales.cpp.i
-.PHONY : src/Animales.cpp.i
+src/Acuatico.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Acuatico.cpp.i
+.PHONY : src/Acuatico.cpp.i
 
-src/Animales.s: src/Animales.cpp.s
-.PHONY : src/Animales.s
+src/Acuatico.s: src/Acuatico.cpp.s
+.PHONY : src/Acuatico.s
 
 # target to generate assembly for a file
-src/Animales.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Animales.cpp.s
-.PHONY : src/Animales.cpp.s
+src/Acuatico.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Acuatico.cpp.s
+.PHONY : src/Acuatico.cpp.s
+
+src/Animal.obj: src/Animal.cpp.obj
+.PHONY : src/Animal.obj
+
+# target to build an object file
+src/Animal.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Animal.cpp.obj
+.PHONY : src/Animal.cpp.obj
+
+src/Animal.i: src/Animal.cpp.i
+.PHONY : src/Animal.i
+
+# target to preprocess a source file
+src/Animal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Animal.cpp.i
+.PHONY : src/Animal.cpp.i
+
+src/Animal.s: src/Animal.cpp.s
+.PHONY : src/Animal.s
+
+# target to generate assembly for a file
+src/Animal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Animal.cpp.s
+.PHONY : src/Animal.cpp.s
+
+src/Desertico.obj: src/Desertico.cpp.obj
+.PHONY : src/Desertico.obj
+
+# target to build an object file
+src/Desertico.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Desertico.cpp.obj
+.PHONY : src/Desertico.cpp.obj
+
+src/Desertico.i: src/Desertico.cpp.i
+.PHONY : src/Desertico.i
+
+# target to preprocess a source file
+src/Desertico.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Desertico.cpp.i
+.PHONY : src/Desertico.cpp.i
+
+src/Desertico.s: src/Desertico.cpp.s
+.PHONY : src/Desertico.s
+
+# target to generate assembly for a file
+src/Desertico.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Desertico.cpp.s
+.PHONY : src/Desertico.cpp.s
 
 src/Habitat.obj: src/Habitat.cpp.obj
 .PHONY : src/Habitat.obj
@@ -199,6 +247,54 @@ src/Habitat.s: src/Habitat.cpp.s
 src/Habitat.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Habitat.cpp.s
 .PHONY : src/Habitat.cpp.s
+
+src/Polar.obj: src/Polar.cpp.obj
+.PHONY : src/Polar.obj
+
+# target to build an object file
+src/Polar.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Polar.cpp.obj
+.PHONY : src/Polar.cpp.obj
+
+src/Polar.i: src/Polar.cpp.i
+.PHONY : src/Polar.i
+
+# target to preprocess a source file
+src/Polar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Polar.cpp.i
+.PHONY : src/Polar.cpp.i
+
+src/Polar.s: src/Polar.cpp.s
+.PHONY : src/Polar.s
+
+# target to generate assembly for a file
+src/Polar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Polar.cpp.s
+.PHONY : src/Polar.cpp.s
+
+src/Selvatico.obj: src/Selvatico.cpp.obj
+.PHONY : src/Selvatico.obj
+
+# target to build an object file
+src/Selvatico.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Selvatico.cpp.obj
+.PHONY : src/Selvatico.cpp.obj
+
+src/Selvatico.i: src/Selvatico.cpp.i
+.PHONY : src/Selvatico.i
+
+# target to preprocess a source file
+src/Selvatico.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Selvatico.cpp.i
+.PHONY : src/Selvatico.cpp.i
+
+src/Selvatico.s: src/Selvatico.cpp.s
+.PHONY : src/Selvatico.s
+
+# target to generate assembly for a file
+src/Selvatico.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Zoologico.dir\build.make CMakeFiles/Zoologico.dir/src/Selvatico.cpp.s
+.PHONY : src/Selvatico.cpp.s
 
 src/Zoo.obj: src/Zoo.cpp.obj
 .PHONY : src/Zoo.obj
@@ -236,12 +332,24 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... src/Animales.obj
-	@echo ... src/Animales.i
-	@echo ... src/Animales.s
+	@echo ... src/Acuatico.obj
+	@echo ... src/Acuatico.i
+	@echo ... src/Acuatico.s
+	@echo ... src/Animal.obj
+	@echo ... src/Animal.i
+	@echo ... src/Animal.s
+	@echo ... src/Desertico.obj
+	@echo ... src/Desertico.i
+	@echo ... src/Desertico.s
 	@echo ... src/Habitat.obj
 	@echo ... src/Habitat.i
 	@echo ... src/Habitat.s
+	@echo ... src/Polar.obj
+	@echo ... src/Polar.i
+	@echo ... src/Polar.s
+	@echo ... src/Selvatico.obj
+	@echo ... src/Selvatico.i
+	@echo ... src/Selvatico.s
 	@echo ... src/Zoo.obj
 	@echo ... src/Zoo.i
 	@echo ... src/Zoo.s
