@@ -9,28 +9,30 @@ un zoológico. El programa debe hacer uso de los conceptos de programación orie
 creación de clases, relaciones (contenedores), herencia, sobrescritura, sobrecarga y modificadores de acceso.  
 
 El zoológico se compone de diferentes hábitat, cada una de los cuales puede contener varios animales. Cada animal
-tiene un nombre, una especie y un hábitat al que pertenece (entre otros). Los animales también pueden hacer
-diferentes acciones, como comer, dormir, jugar, etc.  
+tiene un nombre, una especie y un hábitat al que pertenece (entre otros).
+El programa debe permitir al usuario realizar las siguientes acciones:  
 
-*_El programa debe permitir al usuario realizar las siguientes acciones:_* 
+- Añadir un nuevo hábitat al zoológico. Se tiene una serie definida de tipos de hábitat que se pueden crear en el
+zoológico: desértico, selvático, polar y acuático.  
 
-* Añadir un nuevo hábitat al zoológico. Se tiene una serie definida de tipos de hábitat que se pueden crear en el
-zoológico (desértico, selvático, polar, etc).  
+- Añadir un nuevo animal a un hábitat existente, garantizando que el hábitat exista y que permita contener el tipo de
+animal. El animal debe permitir identificar a qué tipo de hábitat puede pertenecer (como un pingüino que
+pertenece al hábitat polar).  
 
-* Añadir un nuevo animal a un hábitat existente, garantizando que el hábitat exista y que permita contener el tipo de
-animal. El animal debe permitir identificar a qué tipo de hábitat puede pertenecer.  
-
-* Listar todos los hábitat del zoológico y sus respectivos animales. Permitiendo a los usuarios ver la información de
+- Listar todos los hábitat del zoológico y sus respectivos animales. Permitiendo a los usuarios ver la información de
 los animales, como su nombre, edad, tipo de alimentación, estado de salud y cualquier otro atributo que el
 estudiante haya decidido agregar.  
 
-* Realizar una acción en particular (como comer, dormir, jugar, etc.) para un animal específico. Para esto debe
-tomar como parámetros el hábitat al que pertenece el animal, un identificador del animal y el nombre de la acción
-a realizar.  
+- Realizar una acción en particular para un animal específico (dar órdenes al animal). Para esto debe tomar como
+parámetros el identificador del animal y el nombre de la acción a realizar. Las acciones disponibles para los
+animales son:  
 
-* Permitir a los usuarios agregar y editar diferentes tipos de alimentos para los animales en el zoológico. Los
-animales deben tener diferentes tipos de alimentación según su dieta (por ejemplo, carnívoros, herbívoros,
-omnívoros).  
+* Comer, recibiendo el alimento y validando si este se encuentra en la lista aprobada para cada tipo de dieta.
+* Dormir, recibiendo el número de horas que el animal debe dormir y validando si es suficiente tiempo de
+acuerdo al valor definido para cada animal.
+* Jugar, permitiendo saber si el animal ya jugó en el día o no.
+- Permitir a los usuarios agregar y editar diferentes tipos de alimentos para los animales en el zoológico. Los
+animales deben tener diferentes tipos de alimentación según su dieta: carnívoros, herbívoros, omnívoros.
 
 El programa debe ser capaz de manejar errores de entrada y salida de datos. Por ejemplo, si el usuario intenta
 ingresar una edad no válida para un animal, el programa debería informar al usuario del error y solicitar que
