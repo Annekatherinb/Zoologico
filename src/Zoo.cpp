@@ -33,7 +33,7 @@ void Zoo::mostrarAnimales() {
     }
 }
 
-//Agrega un hábitat.
+//Agrega un hábitat, todas de van a guardar en un vector.
 void Zoo::agregarHabitad(string tipo){
     Habitat* pHabitadTemp = new Habitat(tipo);
     this->vector1.push_back(pHabitadTemp);
@@ -46,7 +46,9 @@ void Zoo::mostrar(){
         cout << (*itVector)->getTipo() << endl;
     }
 }
-//Crea un mapa que tiene como clave el hábitat al que se agregará el animal ingresado con su respectivo id.
+//Crea un mapa que tiene como clave el hábitat al que se agregará el animal ingresado con su respectivo id,
+//es mucho mas ordenado tener un mapa ya que ciertas caracteristicas van ccontener variedad de datos diferentes a ellas.
+
 void Zoo::animalHabitad(int id, string habitad){
 
     unordered_map<int, Animal*>::iterator itMap;
@@ -72,7 +74,7 @@ void Zoo::animalHabitad(int id, string habitad){
         cout<<"ese habitad no existe\n";
     }
 }
-//Muestra los hábitats con los animales que hay en ellos.
+//Muestra los hábitats con los animales que hay en ellos, es para verificar si se este agregando bien
 void Zoo::mostrarAnimalHabitat() {
     unordered_map<string , Animal*>::iterator it;
     for (const auto& it : mapaHabitado) {

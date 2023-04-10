@@ -16,7 +16,10 @@ using std::getline;
 using std::cin;
 
 int contadorId = 0;//Es el id de los animales, comienza en 0 y se utiliza para asignar ordenadamente los id.
-//El usuario agrega un animal con sus caracterísitcas.
+//El usuario agrega un animal con sus característica el programa le va a pedir al usuario valores de entrada
+//como el nombre, la especie, la alimentacion, etc... del nuevo objeto que va a crear, toda se guarda en las variables
+//la funcion principal animal.
+
 void agregarAnimales(Zoo*Zoo){
     string nombreTemp, habitatTemp, especieTemp, alimentaciontemp, saludTemp;
     int edadTemp, prueba, comprobador=0, horasTemp;
@@ -102,6 +105,10 @@ void agregarAnimales(Zoo*Zoo){
     contadorId++;
 }
 
+//Esta funcion le pide al usuario que ingrese todos los habitat que seran agregados a un vector; le pide todos los habitat
+//para no tener que seleccionar nuevamente la opcion, ademas verifica que sean los habitat que estan prestablecidos, ay que si ingresa
+//un habitat que error va a pedir nuevamente que lo digite.
+
 void agregarHabitad(Zoo* Habitad){
     string tipoTemp;
     Habitat* pTemp;
@@ -117,7 +124,11 @@ void agregarHabitad(Zoo* Habitad){
         }
     }
 }
-//Le pide al usuario que digite el id del animal para poder agregarlo a un hábitat.
+//Le pide al usuario que digite el id del animal para poder agregarlo a un hábitat. los valores que digito van a entrar
+//a la funcion animal habitad que me hace las verificaciones como: si el animal existe dentro del mapa de animales, si el habitat
+//al que se ingresa el animal es respectivamente su habitat de origen, al ingresar valores erroneos automaticamente me los va a
+//rechazar.
+
 void animalHabitad(Zoo* Habitad){
     int idTemp;
     string habitadTemp;
@@ -127,7 +138,10 @@ void animalHabitad(Zoo* Habitad){
     cin>>habitadTemp;
     Habitad->animalHabitad(idTemp, habitadTemp);
 }
-//Le pide al usuario que digite una de las 3 órdenes que puede realizar un animal.
+//Le pide al usuario que digite una de las 3 órdenes que puede realizar un animal, sea comer, dormir o jugar
+//la opcion que se ingresa va a realizar una validacion dentro de funcion funcion a la cual intentamos hacerle sobrecarga
+//para que aceptara diferentes argumentos de la misma funcion accion;
+
 void accion(Zoo* accion){
     int op;//La opción como un número.
     string opcion;//Recibe el nombre de la acción a realizar.
@@ -148,7 +162,10 @@ void accion(Zoo* accion){
     }
     accion->acciones(op);
 }
-//Permite ingresar los alimentos
+//Permite ingresar los alimentos, le dice a al usuario que ingrese la dieta de un animal segun su tipo de alimentacion;
+//esto se hace para que el tipo que me ingrese quede como la clave de un mapa que a contener vectores de strings con los
+//alimentos que el animal puede comer.
+
 void ingresarAlimento(Zoo* pZoo){
     string tipo;
     cout<<"Digite el tipo animal al que le quiere agregar los alimentos de su dieta:\n";
@@ -159,7 +176,7 @@ void ingresarAlimento(Zoo* pZoo){
         cout<<"Eso no es valido";
     }
 }
-
+//menu con todas las opciones
 
 void Menu(Zoo* zoo){
     int op = 0;
@@ -212,6 +229,7 @@ void Menu(Zoo* zoo){
 }
 
 int main(){
+    //aqui creamos nuestro zoologico
     Zoo* pZoo = new Zoo("South Hills");
     Menu(pZoo);
     delete pZoo;

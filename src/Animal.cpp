@@ -10,7 +10,7 @@ using std::cout;
 using std::endl;
 using std::getline;
 using std::cin;
-//Constructor del animal
+//Constructor del animal, para crear todos lo objetos que queramos
 Animal::Animal(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad, int juego, int horasSueno):
     nombre(nombre),
     especie(especie),
@@ -19,7 +19,7 @@ Animal::Animal(string nombre, string especie, string habitat, string alimentacio
     salud(salud),
     id(id),
     edad(edad), juego(juego), horasSueno(horasSueno){}
-//Set y get de los animales.
+//Set y get de los animales para poder ingresar a sus caracteristicas y darle valores
 string Animal::getNombre(){
     return this->nombre;
 }
@@ -73,17 +73,33 @@ int Animal::getHorasSueno(){
 int Animal::setHorasSueno(){
     this->horasSueno = horasSueno;
 }
-//Función que permite jugar y corrobora si ya jugó en el día.
+//Función que permite jugar y corrobora si ya jugó en el día, segun una de las caracteristicas del animal que me dice que
+//siempre va a empezar 0,entonces me realiza la validacion si esta en 0 puede jugar, de lo contrario no puede jugar porque ya jugo
+//ya que su caracteristica se volvio 1;
+
 void Animal::jugar(Animal* pAnimal) {
-    if(pAnimal->getJuego() == 0){
-        cout<<pAnimal->getNombre()<<" esta jugando\n";
-        pAnimal->setJuego(1);
+    if(pAnimal->getSalud() == "Saludable"){
+        if(pAnimal->getJuego() == 0){
+            cout<<pAnimal->getNombre()<<" esta jugando\n";
+            pAnimal->setJuego(1);
+        }else {
+            cout << pAnimal->getNombre() << "no puede jugar porque ya jugo\n";
+        }
+    }else if(pAnimal->getSalud() == "Regular") {
+        if (pAnimal->getJuego() == 0) {
+            cout << pAnimal->getNombre() << " el animal se encuentra delicado esta jugando suavemente\n";
+            pAnimal->setJuego(1);
+        } else {
+            cout << pAnimal->getNombre() << "no puede jugar porque ya jugo\n";
+        }
     }else{
-        cout<<pAnimal->getNombre()<<"no puede jugar porque ya jugo\n";
+        cout<<"Este animal no puede jugar se encuentra en revision por su estado de salud\n";
     }
 
 }
-//Permite dormir al animal y comprueba un mínimo y un máximo de horas.
+//Permite dormir al animal y comprueba un mínimo y un máximo de horas, se hace la validacion para verificar si las horas
+//que el usuario que animal duerma son las sanas para el animal
+
 void Animal::dormir(Animal* pAnimal) {
 
     int suenoIngresado,horasMax,corrector=0;
@@ -101,7 +117,8 @@ void Animal::dormir(Animal* pAnimal) {
 
 }
 //Imprime y permite que se compruebe si la opción es válida, comprobando si el número corresponde a una comida
-//y si lo que ingresa el usuario es un entero.
+//y si lo que ingresa el usuario es un entero, y no cualquier tipo de dato que me pueda generar un bucle infinito
+
 void Animal::comer(Animal *pAnimal, int cantidadAlimento) {
     int comida,o=0;
     int verificador=cantidadAlimento;//=Cantidad de alimentos impresos
