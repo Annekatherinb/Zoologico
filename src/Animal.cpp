@@ -30,28 +30,15 @@ string Animal::setNombre(string nombre){
 string Animal::getEspecie(){
     return this->especie;
 }
-/*
-string Animal::setEspecie(string especie){
-    this->especie=especie;
-}
-*/
+
 string Animal::getHabitat(){
     return this->habitat;
 }
-/*
-string Animal::setHabitat(string habitat){
-    this->habitat=habitat;
-}
-*/
 
 string Animal::getAlimentacion(){
     return this->alimentacion;
 }
-/*
-string Animal::setAlimentacion(string alimentacion){
-    this->alimentacion=alimentacion;
-}
-*/
+
 string Animal::getSalud(){
     return this->salud;
 }
@@ -113,14 +100,14 @@ void Animal::dormir(Animal* pAnimal) {
     }
 
 }
-void Animal::comer(Animal* animal) {
 
-    if(animal->getAlimentacion() == "carnivoro"){
-        cout<<animal->getNombre()<<" esta comiendo carne\n";
-    }else if(animal->getAlimentacion() == "herbivoro"){
-        cout<<animal->getNombre()<<" esta comiendo plantas\n";
-    }else{
-        cout<<animal->getNombre()<<" esta comiendo plantas, carne u otro tipo de comida\n";
-    }
+void Animal::comer(Animal *pAnimal, int cantidadAlimento) {
+    int comida;
+    int verificador=cantidadAlimento;//=Cantidad de alimentos impresos
+    do{
+        cout<<"De los alimentos que puede ver en pantalla escriba cual le quiere dar al animal: \n";
+        cin>>comida;
+    }while(comida>verificador || comida<0 );
+    cout<<pAnimal->nombre<<" esta comiendo";
+
 }
-

@@ -40,11 +40,8 @@ public:
     string getNombre();
     string setNombre(string nombre);
     string getEspecie();
-    string setEspecie(string especie);
     string getHabitat();
-    string setHabitat(string habitat);
     string getAlimentacion();
-    string setAlimentacion(string alimentacion);
     string getSalud();
     string setSalud(string salud);
     int getId();
@@ -56,7 +53,7 @@ public:
     int getHorasSueno();
     int setHorasSueno();
     void jugar(Animal* pAnimal);
-    void comer(Animal* animal);
+    void comer(Animal* animal, int);
     void dormir(Animal* pAnimal);
 
 };

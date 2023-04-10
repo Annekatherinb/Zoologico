@@ -52,7 +52,7 @@ void agregarAnimales(Zoo*Zoo){
     getline(cin,especieTemp,'\n');
 
     while(comprobador==1){
-        cout<<"Ingrese la alimentacion del animal\n 1.Carnivoro. \n 2.Herviboro. \n 3.Omnivoro."<<endl;
+        cout<<"Ingrese la alimentacion del animal\n 1.Carnivoro. \n 2.Herbivoro. \n 3.Omnivoro."<<endl;
         cin>>prueba;
         if(prueba==1){
             comprobador=2;
@@ -130,14 +130,39 @@ void animalHabitad(Zoo* Habitad){
 
 void accion(Zoo* accion){
     int op;
+    string opcion;
     cout<< "Ingresa la accion para que el animal pueda realizarla: \n";
-    cin>>op;
+    do{
+        cin>>opcion;
+        if(opcion!="comer" && opcion!="domir" && opcion!="jugar"){
+            cout<<"Opcion invalida, digitela nuevamente.\n";
+        }
+    }while(opcion!="comer" && opcion!="domir" && opcion!="jugar");
+
+    if(opcion=="comer"){
+        op=3;
+    }else if(opcion=="domrir"){
+        op=2;
+    }else{
+        op=3;
+    }
     accion->acciones(op);
 }
 
+void ingresarAlimento(Zoo* pZoo){
+    string tipo;
+    cout<<"Digite el tipo animal al que le quiere agregar los alimentos de su dieta:\n";
+    cin>>tipo;
+    if(tipo == "carnivoro" || tipo == "herbivoro" || tipo == "omnivoro") {
+        pZoo->recibirAlimento(tipo);
+    }else{
+        cout<<"Eso no es valido";
+    }
+}
+
+
 void Menu(Zoo* zoo){
     int op = 0;
-
 
     do{
         cout<<"\n**** Bienvenidos al Zoologico "<< zoo->getNombre()<<"****\n";
@@ -173,7 +198,7 @@ void Menu(Zoo* zoo){
                 zoo->mostrarAnimalHabitat();
                 break;
             case 6:
-                zoo->mapaAlimeto();
+                ingresarAlimento(zoo);
                 break;
             case 7:
                 accion(zoo);

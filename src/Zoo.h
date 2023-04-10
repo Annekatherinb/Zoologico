@@ -13,7 +13,7 @@
 #include <vector>
 #include <iterator>
 #include <unordered_map>
-
+#include <algorithm>
 
 using std::string;
 using std::cout;
@@ -30,8 +30,7 @@ private:
     unordered_map<int,Animal*>mapaAnimales;
     unordered_map<string,vector<Animal*>>mapaHabitado;
     vector<Habitat*> vector1;
-    //unordered_map<string, string> alimentos;
-    unordered_map<string ,string> mapaAlimentos;
+    unordered_map<string, vector<string>> alimentos;
 
 
 public:
@@ -46,8 +45,10 @@ public:
     void animalHabitad(int id, string habitad);
     void mostrarAnimalHabitat();
     bool buscar(int id);
-    void mapaAlimeto();
     void acciones(int op);
+    void recibirAlimento(string tipoAnimal);
+    void imprimirAlimentos(string tipoAnimal);
+    int contadorAlimentos(string tipoAnimal);
 };
 
 

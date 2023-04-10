@@ -95,13 +95,32 @@ bool Zoo::buscar(int id){
     }
 }
 
-void Zoo::mapaAlimeto() {
-    mapaAlimentos={{"carnivoro", "carne"},{"herbivoro", "plantas"},{"omnivoro","cualquiera"}};
-    for (auto elemento : mapaAlimentos) {
-        cout << "Animal: " << elemento.first << ", Dieta: " << elemento.second << endl;
-    }
-
+void Zoo::recibirAlimento(string tipoAnimal) {
+    string alimento;
+    std::vector<string> comida;
+    cout<<"Digite el alimento deseado o 'no' para no digitar mas.\n";
+    do{
+        std::cin>>alimento;
+        if(alimento!="no"){
+            comida.push_back(alimento);
+        }
+    }while(alimento!="no");
+    alimentos.insert(make_pair(tipoAnimal, comida));
 }
+
+void Zoo::imprimirAlimentos(string tipoAnimal){
+    for (auto const &valor: alimentos[tipoAnimal]) {
+        cout << "los alimentos de este animal son: " << valor << ", \n";
+    }
+}
+int Zoo::contadorAlimentos(string tipoAnimal){
+    int cont;
+    for (auto const &valor: alimentos[tipoAnimal]) {
+        cont++;
+    }
+    return cont;
+}
+
 void Zoo::acciones(int op) {
     unordered_map<int, Animal*>::iterator itMap;
     Animal* pTemp;
@@ -121,17 +140,10 @@ void Zoo::acciones(int op) {
                 }
                 else if(op == 3){
                     Animal *pAnimal = itMap->second;
-                    string comiendo;
-                    auto it = mapaAlimentos.find(pAnimal->getAlimentacion());
-                    if(it != mapaAlimentos.end()) {
-                        cout<< "Digite el nombre de la comida que desea darle al animal:\n 1. carne\n 2.plantas\n 3.cualquiera\n";
-                        std::cin >> comiendo;
-                        if (comiendo == it->second) {
-                            pTemp->comer(pAnimal);
-                        } else {
-                            cout << "Eso no esta dentro de la dieta del animal\n";
-                        }
-                    }
+                    int cant;
+                    imprimirAlimentos(pAnimal->getAlimentacion());
+                    cant = contadorAlimentos(pAnimal->getAlimentacion());
+                    pTemp->comer(pAnimal, cant);
                 }else{
                     cout<<"Esa opcion no existe\n";
                 }
