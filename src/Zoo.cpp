@@ -4,14 +4,18 @@
 #include "Zoo.h"
 #include "Habitat.h"
 
-
+//constructor del nombre del zoologico
 Zoo::Zoo(string nombre): nombre(nombre){}
+
+//funcion que recibi el animal y lo agrega a un mapa que tiene como clave un id y como valor de clave un puntero que guarda
+//caracteristicas del animal
 
 void Zoo::recibirAnimal(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad, int horasSueno){
     Animal*pAnimalesTemp=new Animal(nombre, especie, habitat, alimentacion, salud, id, edad, 0, horasSueno);
     this->mapaAnimales.insert(make_pair(id,pAnimalesTemp));
 }
 
+//get y set del nombre del zoológico.
 string Zoo::getNombre(){
     return this->nombre;
 }
@@ -19,7 +23,7 @@ string Zoo::getNombre(){
 string Zoo::setNombre(string nombre){
     this->nombre=nombre;
 }
-
+//Imprime los animales que se agregaron al mapa.
 void Zoo::mostrarAnimales() {
     unordered_map<int, Animal*>::iterator itmap;
     for(itmap = this->mapaAnimales.begin(); itmap != this->mapaAnimales.end();itmap++){
@@ -29,12 +33,12 @@ void Zoo::mostrarAnimales() {
     }
 }
 
-
+//Agrega un hábitat.
 void Zoo::agregarHabitad(string tipo){
     Habitat* pHabitadTemp = new Habitat(tipo);
     this->vector1.push_back(pHabitadTemp);
 }
-
+//Muestra los hábitat agregados.
 void Zoo::mostrar(){
     cout << "Habitats agregados:\n";
     std::vector<Habitat*>::iterator itVector;
@@ -42,7 +46,7 @@ void Zoo::mostrar(){
         cout << (*itVector)->getTipo() << endl;
     }
 }
-
+//Crea un mapa que tiene como clave el hábitat al que se agregará el animal ingresado con su respectivo id.
 void Zoo::animalHabitad(int id, string habitad){
 
     unordered_map<int, Animal*>::iterator itMap;
@@ -68,7 +72,7 @@ void Zoo::animalHabitad(int id, string habitad){
         cout<<"ese habitad no existe\n";
     }
 }
-
+//Muestra los hábitats con los animales que hay en ellos.
 void Zoo::mostrarAnimalHabitat() {
     unordered_map<string , Animal*>::iterator it;
     for (const auto& it : mapaHabitado) {
@@ -85,7 +89,7 @@ void Zoo::mostrarAnimalHabitat() {
         }
     }
 }
-
+//Busca un animal recibiendo como parámetro el id, retorna si se halla o no.
 bool Zoo::buscar(int id){
     unordered_map<int, Animal*>::iterator itMap;
     if(mapaAnimales.count(id)>0) {
@@ -94,7 +98,7 @@ bool Zoo::buscar(int id){
         return false;
     }
 }
-
+//Recibe los alimentos que se guardarán según el tipo de dieta.
 void Zoo::recibirAlimento(string tipoAnimal) {
     string alimento;
     std::vector<string> comida;
@@ -107,20 +111,24 @@ void Zoo::recibirAlimento(string tipoAnimal) {
     }while(alimento!="no");
     alimentos.insert(make_pair(tipoAnimal, comida));
 }
-
+//Imprime los alimentos según el tipo de dieta.
 void Zoo::imprimirAlimentos(string tipoAnimal){
+    int numAlimento=1;
+    cout << "los alimentos de este animal son: \n";
     for (auto const &valor: alimentos[tipoAnimal]) {
-        cout << "los alimentos de este animal son: " << valor << ", \n";
+        cout << numAlimento << ". " << valor << ", \n";
+        numAlimento++;
     }
 }
+//Ennumera los alimentos que se imprimen.
 int Zoo::contadorAlimentos(string tipoAnimal){
-    int cont;
+    int cont=0;
     for (auto const &valor: alimentos[tipoAnimal]) {
         cont++;
     }
     return cont;
 }
-
+//Acciones que puede realizar un animal.
 void Zoo::acciones(int op) {
     unordered_map<int, Animal*>::iterator itMap;
     Animal* pTemp;
@@ -143,6 +151,7 @@ void Zoo::acciones(int op) {
                     int cant;
                     imprimirAlimentos(pAnimal->getAlimentacion());
                     cant = contadorAlimentos(pAnimal->getAlimentacion());
+                    cout<<cant;
                     pTemp->comer(pAnimal, cant);
                 }else{
                     cout<<"Esa opcion no existe\n";

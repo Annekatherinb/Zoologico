@@ -15,8 +15,8 @@ using std::endl;
 using std::getline;
 using std::cin;
 
-int contadorId = 0;
-
+int contadorId = 0;//Es el id de los animales, comienza en 0 y se utiliza para asignar ordenadamente los id.
+//El usuario agrega un animal con sus caracterísitcas.
 void agregarAnimales(Zoo*Zoo){
     string nombreTemp, habitatTemp, especieTemp, alimentaciontemp, saludTemp;
     int edadTemp, prueba, comprobador=0, horasTemp;
@@ -24,7 +24,7 @@ void agregarAnimales(Zoo*Zoo){
     cout<<"Ingrese el nombre del animal"<<endl;
     cin.ignore();
     getline(cin,nombreTemp,'\n');
-
+//Recibe el hábitat y comprueba si la opción ingresada es válida.
     while(comprobador==0){
         cout<<"Ingrese el habitat del animal\n 1.Selvatico. \n 2.Polar. \n 3.Acuatico \n 4.Desertico"<<endl;
         cin>>prueba;
@@ -45,12 +45,11 @@ void agregarAnimales(Zoo*Zoo){
         }
 
     }
-
-
+//Recibe la especie del animal.
     cout<<"Ingrese la especie del animal"<<endl;
     cin.ignore();
     getline(cin,especieTemp,'\n');
-
+//Recibe la alimentación del animal y verifica si la opción es válida...
     while(comprobador==1){
         cout<<"Ingrese la alimentacion del animal\n 1.Carnivoro. \n 2.Herbivoro. \n 3.Omnivoro."<<endl;
         cin>>prueba;
@@ -67,7 +66,7 @@ void agregarAnimales(Zoo*Zoo){
             cout<<"Opcion invalida"<<endl;
         }
     }
-
+//...
     while(comprobador==2){
         cout<<"Ingrese la salud del animal\n 1.Saludable. \n 2.Regular. \n 3.Mala."<<endl;
         cin>>prueba;
@@ -84,16 +83,17 @@ void agregarAnimales(Zoo*Zoo){
             cout<<"Opcion invalida"<<endl;
         }
     }
-
+//...
     while(comprobador==3){
         cout<<"Ingrese la edad del animal"<<endl;
         cin>>edadTemp;
         if(edadTemp>=0 && edadTemp<200){
-            comprobador=0;
+            comprobador=1;
         }else{
             cout<<"Edad invalida"<<endl;
         }
     }
+//recibe las horas que duerme el animal.
     cout<<"Ingrese la cantidad de horas que duerme"<<endl;
     cin>>horasTemp;
 
@@ -117,7 +117,7 @@ void agregarHabitad(Zoo* Habitad){
         }
     }
 }
-
+//Le pide al usuario que digite el id del animal para poder agregarlo a un hábitat.
 void animalHabitad(Zoo* Habitad){
     int idTemp;
     string habitadTemp;
@@ -127,10 +127,10 @@ void animalHabitad(Zoo* Habitad){
     cin>>habitadTemp;
     Habitad->animalHabitad(idTemp, habitadTemp);
 }
-
+//Le pide al usuario que digite una de las 3 órdenes que puede realizar un animal.
 void accion(Zoo* accion){
-    int op;
-    string opcion;
+    int op;//La opción como un número.
+    string opcion;//Recibe el nombre de la acción a realizar.
     cout<< "Ingresa la accion para que el animal pueda realizarla: \n";
     do{
         cin>>opcion;
@@ -138,7 +138,7 @@ void accion(Zoo* accion){
             cout<<"Opcion invalida, digitela nuevamente.\n";
         }
     }while(opcion!="comer" && opcion!="domir" && opcion!="jugar");
-
+//Convierte la opción escrita a un número que lo representa.
     if(opcion=="comer"){
         op=3;
     }else if(opcion=="domrir"){
@@ -148,13 +148,13 @@ void accion(Zoo* accion){
     }
     accion->acciones(op);
 }
-
+//Permite ingresar los alimentos
 void ingresarAlimento(Zoo* pZoo){
     string tipo;
     cout<<"Digite el tipo animal al que le quiere agregar los alimentos de su dieta:\n";
     cin>>tipo;
     if(tipo == "carnivoro" || tipo == "herbivoro" || tipo == "omnivoro") {
-        pZoo->recibirAlimento(tipo);
+        pZoo->recibirAlimento(tipo);//Envía a una función que recibe una cantidad indeterminada de alimentos.
     }else{
         cout<<"Eso no es valido";
     }

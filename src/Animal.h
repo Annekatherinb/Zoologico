@@ -6,7 +6,7 @@
 #define ZOOLOGICO_ANIMAL_H
 #include <string>
 #include <iostream>
-
+#include <limits>
 #include <vector>
 #include <iterator>
 #include <unordered_map>

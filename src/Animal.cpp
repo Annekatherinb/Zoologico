@@ -10,7 +10,7 @@ using std::cout;
 using std::endl;
 using std::getline;
 using std::cin;
-
+//Constructor del animal
 Animal::Animal(string nombre, string especie, string habitat, string alimentacion, string salud, int id, int edad, int juego, int horasSueno):
     nombre(nombre),
     especie(especie),
@@ -19,7 +19,7 @@ Animal::Animal(string nombre, string especie, string habitat, string alimentacio
     salud(salud),
     id(id),
     edad(edad), juego(juego), horasSueno(horasSueno){}
-
+//Set y get de los animales.
 string Animal::getNombre(){
     return this->nombre;
 }
@@ -73,7 +73,7 @@ int Animal::getHorasSueno(){
 int Animal::setHorasSueno(){
     this->horasSueno = horasSueno;
 }
-
+//Función que permite jugar y corrobora si ya jugó en el día.
 void Animal::jugar(Animal* pAnimal) {
     if(pAnimal->getJuego() == 0){
         cout<<pAnimal->getNombre()<<" esta jugando\n";
@@ -83,7 +83,7 @@ void Animal::jugar(Animal* pAnimal) {
     }
 
 }
-
+//Permite dormir al animal y comprueba un mínimo y un máximo de horas.
 void Animal::dormir(Animal* pAnimal) {
 
     int suenoIngresado,horasMax,corrector=0;
@@ -100,14 +100,23 @@ void Animal::dormir(Animal* pAnimal) {
     }
 
 }
-
+//Imprime y permite que se compruebe si la opción es válida, comprobando si el número corresponde a una comida
+//y si lo que ingresa el usuario es un entero.
 void Animal::comer(Animal *pAnimal, int cantidadAlimento) {
-    int comida;
+    int comida,o=0;
     int verificador=cantidadAlimento;//=Cantidad de alimentos impresos
-    do{
-        cout<<"De los alimentos que puede ver en pantalla escriba cual le quiere dar al animal: \n";
-        cin>>comida;
-    }while(comida>verificador || comida<0 );
+    cout<<"De los alimentos que puede ver en pantalla escriba cual le quiere dar al animal: \n";
+    while(o==0){
+        if (!(std::cin >> comida)) {//Comprueba si el dato ingresado es un entero y no otro tipo de dato.
+            cout << "Digite un numero por favor. \n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Descarta el resto de la entrada.
+        }else if( comida>verificador || comida<0){
+            cout<<"Numero invalido. \n";
+        } else {
+            o=1;
+        }
+    }
     cout<<pAnimal->nombre<<" esta comiendo";
 
 }
