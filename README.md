@@ -43,7 +43,7 @@ anteriormente. El proyecto se evaluará en función de la calidad del código, l
 programación orientada a objetos, la funcionalidad del programa y la documentación.**  
 
 
-![Diagrama de clases](https://github.com/Annekatherinb/Zoologico/blob/main/Diagrama%20de%20estado.drawio%20(2).png?raw=true)  
+![Diagrama de clases](https://github.com/Annekatherinb/Zoologico/blob/8db3c79a58f963509ca67956f5c76e7622687357/Diagrama%20de%20estado.drawio%20(2).png)  
   
     
  1. ### Funcionalidad del Programa
