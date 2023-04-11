@@ -48,3 +48,17 @@ programación orientada a objetos, la funcionalidad del programa y la documentac
     
  1. ### Funcionalidad del Programa
  
+Al iniciar el programa se despliega el menú del mismo, en el que debemos poner el número de la opción a elegir, lo primero que se debe hacer es la opción 1, la cual es ingresar un animal, en esta opción nos piden todos los datos del animal el cual debemos ingresarlos uno a uno cuando se nos pregunte.  
+*_Una vez hayamos ingresado la cantidad de animales tenemos diferentes opciones para interactuar, el programa puede enseñarnos los animales que están guardados hasta el momento, podemos digitar hábitats nuevos y asignarle hábitat a los animales._*  
+Una vez hayamos podido interactuar con las opciones anteriores entramos a otra opción que es fundamental:  
+* la opción 6 está la posibilidad de asignar las diferentes dietas, pues hay animales carnívoros, herbívoros y omnívoros, aquí podemos según el tipo de alimentación que elegimos, *_ingresaremos la cantidad de alimentos que nos parezca ideal, seguidamente ingresamos la palabra “no” para parar de ingresar alimentos (teniendo en cuenta que todos los alimentos se guardarán en el tipo de dieta que elegimos al principio)._*  
+*  la opción 7 es la más interactiva, al seleccionarla se nos pedirá que digamos que actividad queremos realizar:  
+1. por ejemplo se debería escribir algo como “jugar”, con esta opción en específico el programa analizará si el animal que elijas después de seleccionar la opción ya ha jugado, de ser así se expresará que los animales no pueden jugar más de una vez por día y ademas dependiendo del estado de salud del animal se determina de manera puede jugar o si no, puede jugar porque se encuentra revision medica.  
+2. al seleccionar la opción “dormir” se preguntará la cantidad de horas a dormir, teniendo en cuenta que cada animal tiene una cantidad de horas mínimas asignadas para dormir, de este modo tiene permitido como mínimo la cantidad de horas que se le asignaron y como máximo la cantidad de horas y un 50% extra de la misma, por ejemplo, si tiene 8 horas asignadas como mínimo, este animal podrá dormir hasta 12 horas.  
+3. con la última opción siendo “comer” se desplegará enumeradamente los alimentos que este animal tiene disponibles para comer, según su dieta,  aquí debemos ingresar el número correspondiente al alimento que desea darle, es importante tener en cuenta que cualquier opción diferente a un número comprendido entre los que tienen relacionado un alimento será rechazado e informado en el momento, posteriormente se pedirá nuevamente que se digite un número hasta que la opción ingresada sea válida.    
+
+**El programa se compila desde el build, luego se ejecuta desde el run o desde el debbuger para deteccion de errores.**  
+*_Las fotos del funcionamiento del programa se encuentran en un archivo pdf en el git._*
+
+ 
+ 
