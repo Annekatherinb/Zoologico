@@ -153,7 +153,6 @@ void Zoo::acciones(int op) {
                     int cant;
                     imprimirAlimentos(pAnimal->getAlimentacion());
                     cant = contadorAlimentos(pAnimal->getAlimentacion());
-                    cout<<cant;
                     pTemp->comer(pAnimal, cant);
                 }else{
                     cout<<"Esa opcion no existe\n";
