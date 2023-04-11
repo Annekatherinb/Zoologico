@@ -30,21 +30,26 @@ void agregarAnimales(Zoo*Zoo){
 //Recibe el hábitat y comprueba si la opción ingresada es válida.
     while(comprobador==0){
         cout<<"Ingrese el habitat del animal\n 1.Selvatico. \n 2.Polar. \n 3.Acuatico \n 4.Desertico"<<endl;
-        cin>>prueba;
-        if(prueba==1){
-            comprobador=1;
-            habitatTemp="selvatico";
-        }else if(prueba==2){
-            comprobador=1;
-            habitatTemp="polar";
-        }else if(prueba==3){
-            comprobador=1;
-            habitatTemp="acuatico";
-        }else if(prueba==4){
-            comprobador=1;
-            habitatTemp="desertico";
-        }else{
-            cout<<"Opcion invalida"<<endl;
+        if (!(std::cin >> prueba)) {
+            cout << "Digite un numero por favor\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Descarta el resto de la entrada.
+        }else {
+            if (prueba == 1) {
+                comprobador = 1;
+                habitatTemp = "selvatico";
+            } else if (prueba == 2) {
+                comprobador = 1;
+                habitatTemp = "polar";
+            } else if (prueba == 3) {
+                comprobador = 1;
+                habitatTemp = "acuatico";
+            } else if (prueba == 4) {
+                comprobador = 1;
+                habitatTemp = "desertico";
+            } else {
+                cout << "Opcion invalida" << endl;
+            }
         }
 
     }
@@ -55,8 +60,11 @@ void agregarAnimales(Zoo*Zoo){
 //Recibe la alimentación del animal y verifica si la opción es válida...
     while(comprobador==1){
         cout<<"Ingrese la alimentacion del animal\n 1.Carnivoro. \n 2.Herbivoro. \n 3.Omnivoro."<<endl;
-        cin>>prueba;
-        if(prueba==1){
+        if (!(std::cin >> prueba)) {
+            cout << "Digite un numero por favor\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Descarta el resto de la entrada.
+        }else if(prueba==1){
             comprobador=2;
             alimentaciontemp="carnivoro";
         }else if(prueba==2){
@@ -72,8 +80,11 @@ void agregarAnimales(Zoo*Zoo){
 //...
     while(comprobador==2){
         cout<<"Ingrese la salud del animal\n 1.Saludable. \n 2.Regular. \n 3.Mala."<<endl;
-        cin>>prueba;
-        if(prueba==1){
+        if (!(std::cin >> prueba)) {
+            cout << "Digite un numero por favor\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Descarta el resto de la entrada.
+        }else if(prueba==1){
             comprobador=3;
             saludTemp="Saludable";
         }else if(prueba== 2){
@@ -89,17 +100,29 @@ void agregarAnimales(Zoo*Zoo){
 //...
     while(comprobador==3){
         cout<<"Ingrese la edad del animal"<<endl;
-        cin>>edadTemp;
-        if(edadTemp>=0 && edadTemp<200){
+        if (!(std::cin >> edadTemp)){
+            cout<<"Digite un numero por favor";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Descarta el resto de la entrada.
+        }else if(edadTemp>=0 && edadTemp<200){
             comprobador=1;
         }else{
             cout<<"Edad invalida"<<endl;
         }
     }
 //recibe las horas que duerme el animal.
+    int bande=0;
     cout<<"Ingrese la cantidad de horas que duerme"<<endl;
-    cin>>horasTemp;
-
+    while(bande==0){
+        //cin>>horasTemp;
+        if (!(std::cin >> horasTemp)){
+            cout<<"Digite un numero por favor";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Descarta el resto de la entrada.
+        }else{
+            bande=1;
+        }
+    }
 
     Zoo->recibirAnimal(nombreTemp,especieTemp,habitatTemp,alimentaciontemp,saludTemp,contadorId,edadTemp, horasTemp);
     contadorId++;
@@ -148,14 +171,14 @@ void accion(Zoo* accion){
     cout<< "Ingresa la accion para que el animal pueda realizarla: \n";
     do{
         cin>>opcion;
-        if(opcion!="comer" && opcion!="domir" && opcion!="jugar"){
+        if(opcion!="comer" && opcion!="dormir" && opcion!="jugar"){
             cout<<"Opcion invalida, digitela nuevamente.\n";
         }
-    }while(opcion!="comer" && opcion!="domir" && opcion!="jugar");
+    }while(opcion!="comer" && opcion!="dormir" && opcion!="jugar");
 //Convierte la opción escrita a un número que lo representa.
-    if(opcion=="comer"){
-        op=3;
-    }else if(opcion=="domrir"){
+    if(opcion=="jugar"){
+        op=1;
+    }else if(opcion=="dormir"){
         op=2;
     }else{
         op=3;

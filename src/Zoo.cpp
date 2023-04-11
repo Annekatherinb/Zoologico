@@ -136,8 +136,8 @@ void Zoo::acciones(int op) {
     Animal* pTemp;
     int idAccion;
     cout<<"Ingrese el id del animal que desea que realize la accion:\n";
-    std::cin>>idAccion;
-    if(mapaAnimales.count(idAccion)>0) {
+    std::cin >> idAccion;
+     if(mapaAnimales.count(idAccion)>0) {
         for (itMap = this->mapaAnimales.begin(); itMap != this->mapaAnimales.end(); ++itMap) {
             if (idAccion == itMap->first){
                 if (op == 1) {
